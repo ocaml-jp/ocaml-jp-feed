@@ -1,13 +1,3 @@
-# List of RSS/Atom feeds to monitor.
-# Each entry needs a `name` (used as the Discord label and state-file slug)
-# and a `url`. Adding a new feed silently seeds its state on the next run
-# (no backfill posted); removing a feed deletes its state file.
-#
-# Example:
-#   feeds:
-#     - name: My Blog
-#       url: https://example.com/feed.xml
-
 feeds:
-- name: Zenn OCamlトピック
+- name: Zenn OCaml
   url: https://zenn.dev/topics/ocaml/feed
