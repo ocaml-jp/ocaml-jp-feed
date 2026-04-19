@@ -1,3 +1,5 @@
 feeds:
 - name: Zenn OCaml
   url: https://zenn.dev/topics/ocaml/feed
+- name: Qiita OCaml
+  url: https://qiita.com/tags/ocaml/feed
