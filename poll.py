@@ -16,7 +16,6 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
 from pathlib import Path
 
 import feedparser
@@ -69,14 +68,11 @@ class FeedsFile(BaseModel):
 class FeedState(BaseModel):
     """On-disk state for a single feed.
 
-    Date-field formats differ on purpose:
-    - ``last_checked`` is minted by us; stored as an aware ``datetime`` and
-      serialized by pydantic as ISO 8601.
-    - ``last_modified`` is stored verbatim from the feed's HTTP Last-Modified
-      header, which RFC 9110 defines as HTTP-date format (e.g.
-      "Fri, 17 Apr 2026 09:00:00 GMT"). We pass it back unmodified as
-      If-Modified-Since on the next fetch, so we keep it as an opaque str.
-    - ``etag`` is likewise kept verbatim (including quotes) — it's opaque to us.
+    ``etag`` and ``last_modified`` are stored verbatim from the upstream HTTP
+    response headers so we can echo them back as ``If-None-Match`` /
+    ``If-Modified-Since`` on the next fetch. ``last_modified`` therefore uses
+    RFC 9110 HTTP-date format (e.g. "Fri, 17 Apr 2026 09:00:00 GMT"), not
+    ISO 8601 — normalizing it would force us to reformat before each request.
     """
 
     # ignore unknown fields so we stay forward-compatible with old state files
@@ -85,7 +81,6 @@ class FeedState(BaseModel):
     url: str
     etag: str | None = None
     last_modified: str | None = None
-    last_checked: datetime | None = None
     seen_ids: list[str] = Field(default_factory=list)
 
     @classmethod
@@ -97,10 +92,6 @@ class FeedState(BaseModel):
     def save(self, path: Path) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(self.model_dump_json(indent=2) + "\n")
-
-
-def now_utc() -> datetime:
-    return datetime.now(timezone.utc).replace(microsecond=0)
 
 
 def entry_id(entry) -> str:
@@ -168,9 +159,6 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
 
     if resp.status_code == 304:
         logger.info("[%s] not modified", name)
-        state.url = url
-        state.last_checked = now_utc()
-        state.save(feed_cfg.state_path)
         return
 
     resp.raise_for_status()
@@ -190,7 +178,6 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
         state.url = url
         state.etag = resp.headers.get("ETag")
         state.last_modified = resp.headers.get("Last-Modified")
-        state.last_checked = now_utc()
         state.save(feed_cfg.state_path)
         return
 
@@ -215,7 +202,6 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
         # even if a later post or network call fails.
         state.seen_ids = (state.seen_ids + posted_ids)[-MAX_SEEN_IDS:]
         state.url = url
-        state.last_checked = now_utc()
         if completed:
             state.etag = resp.headers.get("ETag")
             state.last_modified = resp.headers.get("Last-Modified")
