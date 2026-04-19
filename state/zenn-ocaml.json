@@ -1,7 +1,8 @@
 {
+  "url": "https://zenn.dev/topics/ocaml/feed",
   "etag": null,
-  "last_checked": "2026-04-19T05:45:28Z",
-  "last_modified": "Sun, 19 Apr 2026 05:39:47 GMT",
+  "last_modified": "Sun, 19 Apr 2026 08:15:34 GMT",
+  "last_checked": "2026-04-19T08:15:36Z",
   "seen_ids": [
     "https://zenn.dev/akabe/articles/phantom-types-map2-on-trees",
     "https://zenn.dev/akabe/articles/phantom-type-trickes",
@@ -22,7 +23,7 @@
     "https://zenn.dev/deerman3189/articles/fc1976a0455e58",
     "https://zenn.dev/funnycat/articles/9587e5dc09e4c4",
     "https://zenn.dev/anozon/articles/idiosyncratic-syntax-ocaml",
-    "https://zenn.dev/kurocat/articles/0fa7b89d059f56"
-  ],
-  "url": "https://zenn.dev/topics/ocaml/feed"
+    "https://zenn.dev/kurocat/articles/0fa7b89d059f56",
+    "https://zenn.dev/akabe/articles/phantom-types-inequalities"
+  ]
 }
