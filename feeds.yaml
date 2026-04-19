@@ -3,3 +3,5 @@ feeds:
   url: https://zenn.dev/topics/ocaml/feed
 - name: Qiita OCaml
   url: https://qiita.com/tags/ocaml/feed
+- name: OCaml Weekly News (日本語訳)
+  url: https://ocaml.jp/cwn-ja/cwn.rss
