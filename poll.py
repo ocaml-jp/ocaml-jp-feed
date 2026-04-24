@@ -68,19 +68,14 @@ class FeedsFile(BaseModel):
 class FeedState(BaseModel):
     """On-disk state for a single feed.
 
-    ``etag`` and ``last_modified`` are stored verbatim from the upstream HTTP
-    response headers so we can echo them back as ``If-None-Match`` /
-    ``If-Modified-Since`` on the next fetch. ``last_modified`` therefore uses
-    RFC 9110 HTTP-date format (e.g. "Fri, 17 Apr 2026 09:00:00 GMT"), not
-    ISO 8601 — normalizing it would force us to reformat before each request.
+    Only fields that change when users care (new items detected) are stored,
+    so no-op polls produce no git diff and no commit notification.
     """
 
     # ignore unknown fields so we stay forward-compatible with old state files
     model_config = ConfigDict(extra="ignore")
 
     url: str
-    etag: str | None = None
-    last_modified: str | None = None
     seen_ids: list[str] = Field(default_factory=list)
 
     @classmethod
@@ -98,13 +93,12 @@ def entry_id(entry) -> str:
     return entry.get("id") or entry.get("link") or ""
 
 
-def fetch_feed(url: str, etag: str | None, last_modified: str | None) -> requests.Response:
-    headers = {"User-Agent": USER_AGENT}
-    if etag:
-        headers["If-None-Match"] = etag
-    if last_modified:
-        headers["If-Modified-Since"] = last_modified
-    return requests.get(url, headers=headers, timeout=HTTP_TIMEOUT)
+def fetch_feed(url: str) -> requests.Response:
+    return requests.get(
+        url,
+        headers={"User-Agent": USER_AGENT},
+        timeout=HTTP_TIMEOUT,
+    )
 
 
 def post_to_discord(webhook_url: str, feed_name: str, title: str, link: str) -> None:
@@ -155,12 +149,7 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
     state = existing or FeedState(url=url)
 
     logger.info("[%s] fetching %s", name, url)
-    resp = fetch_feed(url, state.etag, state.last_modified)
-
-    if resp.status_code == 304:
-        logger.info("[%s] not modified", name)
-        return
-
+    resp = fetch_feed(url)
     resp.raise_for_status()
     parsed = feedparser.parse(resp.content)
     if parsed.bozo and not parsed.entries:
@@ -176,8 +165,6 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
         logger.info("[%s] first run: seeding %d items (no posts)", name, len(seeded))
         state.seen_ids = seeded[-MAX_SEEN_IDS:]
         state.url = url
-        state.etag = resp.headers.get("ETag")
-        state.last_modified = resp.headers.get("Last-Modified")
         state.save(feed_cfg.state_path)
         return
 
@@ -185,7 +172,6 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
     logger.info("[%s] %d new items", name, len(new_entries))
 
     posted_ids: list[str] = []
-    completed = False
     try:
         for entry in new_entries:
             post_to_discord(
@@ -196,16 +182,13 @@ def process_feed(feed_cfg: FeedConfig, webhook_url: str) -> None:
             )
             posted_ids.append(entry_id(entry))
             time.sleep(DISCORD_POST_INTERVAL_SECONDS)
-        completed = True
     finally:
         # Commit whatever we successfully posted so we never double-post,
         # even if a later post or network call fails.
-        state.seen_ids = (state.seen_ids + posted_ids)[-MAX_SEEN_IDS:]
-        state.url = url
-        if completed:
-            state.etag = resp.headers.get("ETag")
-            state.last_modified = resp.headers.get("Last-Modified")
-        state.save(feed_cfg.state_path)
+        if posted_ids:
+            state.seen_ids = (state.seen_ids + posted_ids)[-MAX_SEEN_IDS:]
+            state.url = url
+            state.save(feed_cfg.state_path)
 
 
 def prune_orphans(active_slugs: set[str]) -> None:
