@@ -9,6 +9,10 @@
    (>= 5.4.1))
   ppx_jane
   async
+  cohttp-async
   core
   core_unix
+  jsonaf
+  ppx_jsonaf_conv
+  syndic
   openrouter_api))

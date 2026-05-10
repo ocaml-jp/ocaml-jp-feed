@@ -1,0 +1,19 @@
+{
+  "feeds": [
+    {
+      "slug": "zenn-ocaml",
+      "name": "Zenn OCaml",
+      "url": "https://zenn.dev/topics/ocaml/feed"
+    },
+    {
+      "slug": "qiita-ocaml",
+      "name": "Qiita OCaml",
+      "url": "https://qiita.com/tags/ocaml/feed"
+    },
+    {
+      "slug": "ocaml-weekly-news",
+      "name": "OCaml Weekly News (日本語訳)",
+      "url": "https://ocaml.jp/cwn-ja/cwn.rss"
+    }
+  ]
+}
