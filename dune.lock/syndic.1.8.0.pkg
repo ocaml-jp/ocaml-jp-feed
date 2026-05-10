@@ -1,0 +1,19 @@
+(version 1.8.0)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs}))))))
+
+(depends
+ (all_platforms
+  (ocaml dune ptime uri xmlm)))
+
+(source
+ (fetch
+  (url
+   https://github.com/Cumulus/Syndic/releases/download/v1.8.0/syndic-1.8.0.tbz)
+  (checksum
+   sha256=e1a073f310b90d59306315042546cdde1d2d0c27270b244830274a79e59101a5)))

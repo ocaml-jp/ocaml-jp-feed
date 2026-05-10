@@ -1,0 +1,7 @@
+(executable
+ (name poll)
+ (public_name ocaml_jp_feed)
+ (package ocaml_jp_feed)
+ (libraries async core core_unix.command_unix ocaml_jp_feed)
+ (preprocess
+  (pps ppx_jane)))

@@ -24,15 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
+      - uses: ocaml-dune/setup-dune@v2
 
       - name: Run poller
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           REPLAY_LAST: ${{ inputs.replay }}
-        run: uv run poll.py
+        run: dune exec bin/poll.exe
 
       - name: Commit state changes
         run: |
