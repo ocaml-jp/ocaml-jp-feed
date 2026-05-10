@@ -7,6 +7,7 @@ module Feed = struct
     { slug : string
     ; name : string
     ; url : string
+    ; mixed_content : bool [@default false] [@jsonaf_drop_default.equal]
     }
   [@@deriving fields ~getters, jsonaf]
 end

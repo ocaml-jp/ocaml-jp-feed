@@ -1,5 +1,5 @@
 (** Posts a single message to a Discord webhook. The message body is
-    [**<feed_name>**: <title>\n<link>] (matching the Python original).
+    [**<feed_name>**: <title>\n<link>].
 
     Honours the [Retry-After] header on HTTP 429 responses; retries up to 3 times total
     before returning [Error]. Returns [Error] on any other non-2xx response or if the

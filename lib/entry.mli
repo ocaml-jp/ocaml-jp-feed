@@ -10,7 +10,13 @@ type t = private
   { id : string
   ; title : string
   ; link : string
+  ; description : string option
   }
 [@@deriving fields ~getters]
 
-val create : id:string -> title:string -> link:string -> t option
+val create
+  :  id:string
+  -> title:string
+  -> link:string
+  -> description:string option
+  -> t option
