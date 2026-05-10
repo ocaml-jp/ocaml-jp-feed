@@ -1,14 +1,8 @@
 open! Core
 open! Async
 
-(* TODO: switch back to the [openrouter_api] library once it accepts present-as-null for
-   [Response.t]'s [system_fingerprint] field. v0.0.1 uses [@jsonaf.option], which only
-   handles field-absent — Bedrock-routed responses include the field as null and break
-   the parse. *)
-
 let model = "anthropic/claude-sonnet-4.6"
-let endpoint = Uri.of_string "https://openrouter.ai/api/v1/chat/completions"
-let http_timeout = Time_float.Span.of_sec 30.
+let tool_name = "classify_post"
 
 let system_prompt =
   "You determine whether a blog post is about the OCaml programming language. Use the \
@@ -23,106 +17,84 @@ let user_prompt_for (entry : Entry.t) =
   List.filter_opt parts |> String.concat ~sep:"\n"
 ;;
 
-let tool_schema : Jsonaf.t =
-  `Object
-    [ "type", `String "function"
-    ; ( "function"
-      , `Object
-          [ "name", `String "classify_post"
-          ; ( "description"
-            , `String "Record whether the blog post is about the OCaml programming language."
-            )
-          ; ( "parameters"
-            , `Object
-                [ "type", `String "object"
-                ; ( "properties"
-                  , `Object
-                      [ ( "ocaml_related"
-                        , `Object
-                            [ "type", `String "boolean"
-                            ; ( "description"
-                              , `String "true if the post is about OCaml; false otherwise"
-                              )
-                            ] )
-                      ] )
-                ; "required", `Array [ `String "ocaml_related" ]
-                ] )
-          ] )
-    ]
+let tool : Openrouter_api.Completions.Tool.t =
+  Openrouter_api.Completions.Tool.create
+    ~name:tool_name
+    ~description:
+      "Record whether the blog post is about the OCaml programming language."
+    ~parameters:
+      (`Object
+        [ "type", `String "object"
+        ; ( "properties"
+          , `Object
+              [ ( "ocaml_related"
+                , `Object
+                    [ "type", `String "boolean"
+                    ; ( "description"
+                      , `String "true if the post is about OCaml; false otherwise" )
+                    ] )
+              ] )
+        ; "required", `Array [ `String "ocaml_related" ]
+        ])
+    ()
 ;;
 
-let request_body ~user_prompt : Jsonaf.t =
-  `Object
-    [ "model", `String model
-    ; ( "messages"
-      , `Array
-          [ `Object
-              [ "role", `String "system"; "content", `String system_prompt ]
-          ; `Object [ "role", `String "user"; "content", `String user_prompt ]
-          ] )
-    ; "tools", `Array [ tool_schema ]
-    ; ( "tool_choice"
-      , `Object
-          [ "type", `String "function"
-          ; ( "function"
-            , `Object [ "name", `String "classify_post" ] )
-          ] )
-    ]
+let request ~user_prompt : Openrouter_api.Completions.Request.t =
+  let module R = Openrouter_api.Completions.Request in
+  { model
+  ; messages = [ R.Message.system system_prompt; R.Message.user user_prompt ]
+  ; tools = [ tool ]
+  ; tool_choice = Some (Openrouter_api.Completions.Tool_choice.force_function tool_name)
+  ; stream = false
+  ; reasoning = None
+  ; parallel_tool_calls = None
+  ; plugins = []
+  ; temperature = None
+  ; top_p = None
+  ; top_k = None
+  ; min_p = None
+  ; top_a = None
+  ; max_tokens = None
+  ; max_completion_tokens = None
+  ; seed = None
+  ; stop = None
+  ; frequency_penalty = None
+  ; presence_penalty = None
+  ; repetition_penalty = None
+  ; logit_bias = None
+  ; logprobs = None
+  ; top_logprobs = None
+  ; verbosity = None
+  ; response_format = None
+  ; modalities = None
+  ; stream_options = None
+  ; service_tier = None
+  ; models = []
+  ; transforms = []
+  }
 ;;
 
-let post ~api_key ~body =
-  let headers =
-    Cohttp.Header.of_list
-      [ "Authorization", "Bearer " ^ api_key
-      ; "Content-Type", "application/json"
-      ]
+let extract_verdict (response : Openrouter_api.Completions.Response.t) =
+  let%bind.Or_error tool_call =
+    match response.choices with
+    | { message = { tool_calls = tc :: _; _ }; _ } :: _ -> Ok tc
+    | _ -> Or_error.error_string "classifier returned no tool call"
   in
-  Cohttp_async.Client.post ~headers ~body:(Cohttp_async.Body.of_string body) endpoint
-;;
-
-let extract_verdict (response_json : Jsonaf.t) =
+  let%bind.Or_error args_json =
+    Jsonaf.parse tool_call.function_.arguments
+    |> Or_error.tag ~tag:"parsing tool call arguments"
+  in
   Or_error.try_with (fun () ->
-    response_json
-    |> Jsonaf.member_exn "choices"
-    |> Jsonaf.list_exn
-    |> List.hd_exn
-    |> Jsonaf.member_exn "message"
-    |> Jsonaf.member_exn "tool_calls"
-    |> Jsonaf.list_exn
-    |> List.hd_exn
-    |> Jsonaf.member_exn "function"
-    |> Jsonaf.member_exn "arguments"
-    |> Jsonaf.string_exn
-    |> Jsonaf.parse
-    |> Or_error.ok_exn
-    |> Jsonaf.member_exn "ocaml_related"
-    |> Jsonaf.bool_exn)
-  |> Or_error.tag ~tag:"extracting verdict from openrouter response"
+    Jsonaf.member_exn "ocaml_related" args_json |> Jsonaf.bool_exn)
+  |> Or_error.tag ~tag:"extracting ocaml_related field"
 ;;
 
 let classify ~api_key ~entry =
   let user_prompt = user_prompt_for entry in
-  let body = Jsonaf.to_string (request_body ~user_prompt) in
-  Deferred.Or_error.try_with_join (fun () ->
-    match%bind Clock.with_timeout http_timeout (post ~api_key ~body) with
-    | `Timeout ->
-      Deferred.return (Or_error.error_string "openrouter classify call timed out")
-    | `Result (resp, response_body) ->
-      let%bind text = Cohttp_async.Body.to_string response_body in
-      let code = Cohttp.Response.status resp |> Cohttp.Code.code_of_status in
-      (match code with
-       | code when code < 200 || code >= 300 ->
-         Deferred.return
-           (Or_error.error_s
-              [%message "openrouter classify call failed" (code : int) text])
-       | _ ->
-         let%bind.Deferred.Or_error response_json =
-           Jsonaf.parse text
-           |> Or_error.tag ~tag:"parsing openrouter response body"
-           |> Deferred.return
-         in
-         let%map.Deferred.Or_error verdict =
-           extract_verdict response_json |> Deferred.return
-         in
-         { Feed_state.Classification.verdict; user_prompt }))
+  let%bind.Deferred.Or_error response =
+    Openrouter_api.Completions.create ~api_key (request ~user_prompt)
+    |> Deferred.Or_error.tag ~tag:"openrouter classify call"
+  in
+  let%map.Deferred.Or_error verdict = extract_verdict response |> Deferred.return in
+  { Feed_state.Classification.verdict; user_prompt }
 ;;

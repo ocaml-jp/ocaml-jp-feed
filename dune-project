@@ -2,6 +2,11 @@
 
 (name ocaml_jp_feed)
 
+(pin
+ (url "git+https://github.com/mt-caret/openrouter-ocaml.git")
+ (package
+  (name openrouter_api)))
+
 (package
  (name ocaml_jp_feed)
  (depends
