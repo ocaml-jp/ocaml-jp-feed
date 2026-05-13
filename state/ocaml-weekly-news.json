@@ -1,12 +1,26 @@
 {
   "url": "https://ocaml.jp/cwn-ja/cwn.rss",
-  "seen_ids": [
-    "https://ocaml.jp/cwn-ja/2026.03.31.html",
-    "https://ocaml.jp/cwn-ja/2026.04.07.html",
-    "https://ocaml.jp/cwn-ja/2026.04.14.html",
-    "https://ocaml.jp/cwn-ja/2026.04.21.html",
-    "https://ocaml.jp/cwn-ja/2026.04.28.html",
-    "https://ocaml.jp/cwn-ja/2026.05.05.html",
-    "https://ocaml.jp/cwn-ja/2026.05.12.html"
+  "seen": [
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.03.31.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.04.07.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.04.14.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.04.21.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.04.28.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.05.05.html"
+    },
+    {
+      "id": "https://ocaml.jp/cwn-ja/2026.05.12.html"
+    }
   ]
 }

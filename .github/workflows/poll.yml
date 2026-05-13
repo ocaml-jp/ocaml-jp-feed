@@ -29,6 +29,7 @@ jobs:
       - name: Run poller
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           REPLAY_LAST: ${{ inputs.replay }}
         run: dune exec bin/poll.exe
 

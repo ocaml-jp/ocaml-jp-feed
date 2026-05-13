@@ -2,6 +2,14 @@
 
 (name ocaml_jp_feed)
 
+; TODO: Currently openrouter_api v0.0.1 has a bug which prevents it from being
+; useful. Pinned to repo which has a fix for this; we should switch back once
+; it's fixed.
+(pin
+ (url "git+https://github.com/mt-caret/openrouter-ocaml.git")
+ (package
+  (name openrouter_api)))
+
 (package
  (name ocaml_jp_feed)
  (depends

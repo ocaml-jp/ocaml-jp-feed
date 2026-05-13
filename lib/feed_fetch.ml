@@ -21,30 +21,44 @@ let http_get url =
 let bare_link_re = Re.Pcre.re "<link>[^<]*</link>" |> Re.compile
 let strip_bare_links body = Re.replace_string bare_link_re ~by:"" body
 
-let atom_title (t : Syndic.Atom.text_construct) =
+let atom_text_construct (t : Syndic.Atom.text_construct) =
   match t with
-  | Text s | Html (_, s) -> s
-  | Xhtml _ -> ""
+  | Text s | Html (_, s) -> Some s
+  | Xhtml _ -> None
+;;
+
+let atom_description (e : Syndic.Atom.entry) =
+  match e.summary with
+  | Some s -> atom_text_construct s
+  | None ->
+    (match e.content with
+     | Some (Text s | Html (_, s)) -> Some s
+     | Some (Xhtml _ | Mime _ | Src _) | None -> None)
 ;;
 
 let atom_entry (e : Syndic.Atom.entry) =
   Entry.create
     ~id:(Uri.to_string e.id)
-    ~title:(atom_title e.title)
+    ~title:(atom_text_construct e.title |> Option.value ~default:"")
     ~link:
       (match e.links with
        | l :: _ -> Uri.to_string l.href
        | [] -> "")
+    ~description:(atom_description e)
 ;;
 
 let rss2_entry (i : Syndic.Rss2.item) =
+  let title, description =
+    match i.story with
+    | All (t, _, d) -> t, Some d
+    | Title t -> t, None
+    | Description (_, d) -> "", Some d
+  in
   Entry.create
     ~id:(Option.value_map i.guid ~default:"" ~f:(fun g -> Uri.to_string g.data))
-    ~title:
-      (match i.story with
-       | All (t, _, _) | Title t -> t
-       | Description _ -> "")
+    ~title
     ~link:(Option.value_map i.link ~default:"" ~f:Uri.to_string)
+    ~description
 ;;
 
 let make_xml body = Xmlm.make_input (`String (0, body))

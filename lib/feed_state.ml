@@ -2,11 +2,27 @@ open! Core
 open! Async
 open Jsonaf.Export
 
+module Classification = struct
+  type t =
+    { verdict : bool
+    ; user_prompt : string
+    }
+  [@@deriving fields ~getters, jsonaf]
+end
+
+module Seen = struct
+  type t =
+    { id : string
+    ; classification : Classification.t option [@jsonaf.option]
+    }
+  [@@deriving fields ~getters, jsonaf]
+end
+
 type t =
   { url : string
-  ; seen_ids : string list
+  ; seen : Seen.t list
   }
-[@@deriving jsonaf]
+[@@deriving fields ~getters, jsonaf]
 
 let load path =
   Deferred.Or_error.try_with (fun () ->
