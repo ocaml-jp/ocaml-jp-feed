@@ -171,6 +171,13 @@
     },
     {
       "id": "https://blog.anqou.net/2026/05/replace-ryzen-under-warranty"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/logq",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NDJSON の TUI ビューワー logq\nLink: https://blog.anqou.net/2026/05/logq\nSummary: \n    GLM Coding Plan を契約していて GLM-5.1 が使い放題（使い放題ではない）なので、GLM-5.1 backed な Claude Code をしばいて NDJSON[1] の TUI ビューワー logq を作っています。なんと Rust 製です。私は Rust が読み書きできな…\n    "
+      }
     }
   ]
 }
