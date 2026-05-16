@@ -1,0 +1,176 @@
+{
+  "url": "https://blog.anqou.net/rss",
+  "seen": [
+    {
+      "id": "https://blog.anqou.net/2020/09/fstar-tips"
+    },
+    {
+      "id": "https://blog.anqou.net/2020/10/aquery"
+    },
+    {
+      "id": "https://blog.anqou.net/2020/12/daidoquer"
+    },
+    {
+      "id": "https://blog.anqou.net/2020/12/parse-fstar-with-fsharp"
+    },
+    {
+      "id": "https://blog.anqou.net/2020/12/vim-plugin"
+    },
+    {
+      "id": "https://blog.anqou.net/2021/04/cuda-graph"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/07/blog-anqou-net"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/08/cmark-gfm-east-asian-line-break"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/08/jitsonnet"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/08/ntfs3-windows-names"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/09/mwpm-journal-entries"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/11/validating-admission-policy"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/11/yume-static-binary"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/12/2024"
+    },
+    {
+      "id": "https://blog.anqou.net/2024/12/start-nixos"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/01/verify-tailscale-acl-in-prolog"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/02/activity-pub-e2e-test-in-local"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/02/build-blog-by-nix"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/02/build-ocaml-by-nix"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/02/syntax-highlight-by-shiki"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/03/multiple-docker-images-by-one-nix-flake"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/03/nixos-unattended-upgrade"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/03/proton-on-nixos"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/06/nix-rust-override-src"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/06/nixos-kindle-on-waydroid"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/06/oxcaml-with-opam-nix"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/07/nixos-module-resolve-infinite-recursion"
+    },
+    {
+      "id": "https://blog.anqou.net/2025/12/2025-recap"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/agenix-for-claude-code"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/command-pipe-while-read-line-do-done-is-dangerous"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/dune-ocaml-syntax"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/mstdn-anqou-net-postmortem-202604"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nix-authenticated-request-to-github"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nix-flake-dependabot"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nixos-latest-linux-kernel"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nixos-nh-os-switch"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nixos-reinstall-bootloader-when-mobo-changed"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/nixos-use-unstable-pkg-with-stable-channel"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/ocaml-eio-pipe-command"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/ocaml-let-star"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/ocaml-string-literal-in-comment"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/04/simple-nix-flake-for-python-dev"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/delete-var-lib-rancher-k3s-data"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/home-manager-claude-code-no-attribution"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/latest-discord-with-fcitx5"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nix-src-from-gh-private-repo"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nix-tree"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-dirty-frag-mitigation"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-limine"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-minikube-kvm2-backend"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-mpv-libaribcaption"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-nh-clean-all"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-static-ip"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-uutils-sudo-rs-ntpd-rs"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-eio-catch-io-error"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-otel"
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/replace-ryzen-under-warranty"
+    }
+  ]
+}
