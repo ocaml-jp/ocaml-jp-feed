@@ -20,6 +20,12 @@
       "name": "lilyum ensemble",
       "url": "https://nymphium.github.io/feed.xml",
       "mixed_content": true
+    },
+    {
+      "slug": "blog.anqou.net",
+      "name": "blog.anqou.net",
+      "url": "https://blog.anqou.net/rss",
+      "mixed_content": true
     }
   ]
 }
