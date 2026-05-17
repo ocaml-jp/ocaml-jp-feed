@@ -178,6 +178,13 @@
         "verdict": false,
         "user_prompt": "Title: NDJSON の TUI ビューワー logq\nLink: https://blog.anqou.net/2026/05/logq\nSummary: \n    GLM Coding Plan を契約していて GLM-5.1 が使い放題（使い放題ではない）なので、GLM-5.1 backed な Claude Code をしばいて NDJSON[1] の TUI ビューワー logq を作っています。なんと Rust 製です。私は Rust が読み書きできな…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-otel-attrs",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: ocaml-opentelemetry で attribute つきのメトリクスを出す\nLink: https://blog.anqou.net/2026/05/ocaml-otel-attrs\nSummary: \n    以前の記事で紹介したとおり ocaml-opentelemetry を使うと OCaml で OpenTelemetry のメトリクスを出力することができます。\nOpenTelemetry ではメトリクスに attribute を付与することができ[1]、Prometheus のラベルのように使えま…\n    "
+      }
     }
   ]
 }
