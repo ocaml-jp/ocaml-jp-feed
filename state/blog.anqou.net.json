@@ -185,6 +185,13 @@
         "verdict": true,
         "user_prompt": "Title: ocaml-opentelemetry で attribute つきのメトリクスを出す\nLink: https://blog.anqou.net/2026/05/ocaml-otel-attrs\nSummary: \n    以前の記事で紹介したとおり ocaml-opentelemetry を使うと OCaml で OpenTelemetry のメトリクスを出力することができます。\nOpenTelemetry ではメトリクスに attribute を付与することができ[1]、Prometheus のラベルのように使えま…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/home-manager-gitignore",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Home Manager で常時有効な gitignore を設定する\nLink: https://blog.anqou.net/2026/05/home-manager-gitignore\nSummary: \n    Git を使って開発していると、レポジトリに関わらず常に .gitignore に追加しておきたいファイルやディレクトリというものが発生することがあります。例えば .envrc や .direnv などが典型的です。最近では CLAUDE.local.md も ignore しておくと便利です。ある…\n    "
+      }
     }
   ]
 }
