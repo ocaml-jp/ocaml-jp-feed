@@ -199,6 +199,13 @@
         "verdict": true,
         "user_prompt": "Title: OCaml で Camomile を使い NFKC で Unicode 正規化\nLink: https://blog.anqou.net/2026/05/ocaml-camomile-nfkc\nSummary: \n    日本語の全角・半角を気にせずに文字列検索を行いたい場合、扱う対象が Unicode なら Unicode 正規化を行うのが一般的らしいです。正規化にも色々種類があるそうなのですが、インターネットを放浪した限りだと NFKC（Normalization Form Compatibility Compo…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-camomile-encode",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: OCaml で Camomile を使って文字コードを変換\nLink: https://blog.anqou.net/2026/05/ocaml-camomile-encode\nSummary: \n    昨日の記事では Camomile を使い Unicode 正規化を行いました。\nCamomile はリッチなライブラリで、文字コードの変換も行うことができます。\n使うモジュールは Camomile.CharEncoding です。of_name を使ってエンコーディングを取得し、それを recode…\n    "
+      }
     }
   ]
 }
