@@ -206,6 +206,13 @@
         "verdict": true,
         "user_prompt": "Title: OCaml で Camomile を使って文字コードを変換\nLink: https://blog.anqou.net/2026/05/ocaml-camomile-encode\nSummary: \n    昨日の記事では Camomile を使い Unicode 正規化を行いました。\nCamomile はリッチなライブラリで、文字コードの変換も行うことができます。\n使うモジュールは Camomile.CharEncoding です。of_name を使ってエンコーディングを取得し、それを recode…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-uunf-normalize",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: OCaml で uunf を使い Unicode 正規化する\nLink: https://blog.anqou.net/2026/05/ocaml-uunf-normalize\nSummary: \n    一昨日の記事では Camomile を使って Unicode 正規化を行ったのですが、この方法を用いたソフトウェアで opam-nix を使って Docker イメージを作成するとイメージサイズが膨れ上がってしまうことが分かりました[1]。\nそこで別の選択肢である uunf を使い Unicode …\n    "
+      }
     }
   ]
 }
