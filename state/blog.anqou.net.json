@@ -213,6 +213,13 @@
         "verdict": true,
         "user_prompt": "Title: OCaml で uunf を使い Unicode 正規化する\nLink: https://blog.anqou.net/2026/05/ocaml-uunf-normalize\nSummary: \n    一昨日の記事では Camomile を使って Unicode 正規化を行ったのですが、この方法を用いたソフトウェアで opam-nix を使って Docker イメージを作成するとイメージサイズが膨れ上がってしまうことが分かりました[1]。\nそこで別の選択肢である uunf を使い Unicode …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-bluetooth-broken",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS 25.11 で Bluetooth が壊れる\nLink: https://blog.anqou.net/2026/05/nixos-bluetooth-broken\nSummary: \n    昨日 NixOS が入っているデスクトップマシンを起動したところ、手持ちの Bluetooth ヘッドフォンが接続できないことに気づきました。調べてみると sudo systemctl status bluetooth の出力が怪しく、Bluetooth のデーモンが起動していないように見えました。…\n    "
+      }
     }
   ]
 }
