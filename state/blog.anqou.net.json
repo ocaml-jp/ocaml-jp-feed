@@ -220,6 +220,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 25.11 で Bluetooth が壊れる\nLink: https://blog.anqou.net/2026/05/nixos-bluetooth-broken\nSummary: \n    昨日 NixOS が入っているデスクトップマシンを起動したところ、手持ちの Bluetooth ヘッドフォンが接続できないことに気づきました。調べてみると sudo systemctl status bluetooth の出力が怪しく、Bluetooth のデーモンが起動していないように見えました。…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-disable-ocamlformat",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: ocamlformat を一部で無効化する\nLink: https://blog.anqou.net/2026/05/ocaml-disable-ocamlformat\nSummary: \n    ocamlformat は OCaml のデファクトスタンダードのフォーマッターです。\nocaml-lsp などを使用して OCaml ファイルを保存するときに勝手に ocamlformat のフォーマットが入るようにしておくと、適当なインデントで式を書いても強力にフォーマットしてくれるので非常に便…\n    "
+      }
     }
   ]
 }
