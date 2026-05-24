@@ -227,6 +227,13 @@
         "verdict": true,
         "user_prompt": "Title: ocamlformat を一部で無効化する\nLink: https://blog.anqou.net/2026/05/ocaml-disable-ocamlformat\nSummary: \n    ocamlformat は OCaml のデファクトスタンダードのフォーマッターです。\nocaml-lsp などを使用して OCaml ファイルを保存するときに勝手に ocamlformat のフォーマットが入るようにしておくと、適当なインデントで式を書いても強力にフォーマットしてくれるので非常に便…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/grafana-v1301-dashboard-v2-format-error",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Grafana v13.0.1 で Save dashboard の出力が壊れる\nLink: https://blog.anqou.net/2026/05/grafana-v1301-dashboard-v2-format-error\nSummary: \n    わくわく鮟鱇ランドのモニタリングシステムとして Grafana を採用しています。この Grafana は Grafana Helm Chart でデプロイされていて[1]、ダッシュボードのためのサイドカーコンテナが有効化されています。これにより、以下のような grafana_dashboard: …\n    "
+      }
     }
   ]
 }
