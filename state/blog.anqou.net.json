@@ -234,6 +234,13 @@
         "verdict": false,
         "user_prompt": "Title: Grafana v13.0.1 で Save dashboard の出力が壊れる\nLink: https://blog.anqou.net/2026/05/grafana-v1301-dashboard-v2-format-error\nSummary: \n    わくわく鮟鱇ランドのモニタリングシステムとして Grafana を採用しています。この Grafana は Grafana Helm Chart でデプロイされていて[1]、ダッシュボードのためのサイドカーコンテナが有効化されています。これにより、以下のような grafana_dashboard: …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/time-range-detection",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: 時刻の範囲に時刻が入っているかを判定する\nLink: https://blog.anqou.net/2026/05/time-range-detection\nSummary: \n    「9 時から 18 時」といった時刻の範囲に、ある時刻（例えば 12 時や 21 時）が入っているかどうかという判定をタイムゾーン込みで行う必要に駆られたのですが意外と難しかったので以下のように考えてみました。\n時刻 hh:mm:ss+tz を、そのタイムゾーンでの 0 時からの経過秒数と、そのタイ…\n    "
+      }
     }
   ]
 }
