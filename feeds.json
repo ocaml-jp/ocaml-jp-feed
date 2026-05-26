@@ -26,6 +26,11 @@
       "name": "blog.anqou.net",
       "url": "https://blog.anqou.net/rss",
       "mixed_content": true
+    },
+    {
+      "slug": "m3tech.blog",
+      "name": "M3 Tech Blog",
+      "url": "https://www.m3tech.blog/rss/category/ocaml"
     }
   ]
 }
