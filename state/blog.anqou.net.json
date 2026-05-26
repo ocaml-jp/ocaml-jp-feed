@@ -241,6 +241,13 @@
         "verdict": false,
         "user_prompt": "Title: 時刻の範囲に時刻が入っているかを判定する\nLink: https://blog.anqou.net/2026/05/time-range-detection\nSummary: \n    「9 時から 18 時」といった時刻の範囲に、ある時刻（例えば 12 時や 21 時）が入っているかどうかという判定をタイムゾーン込みで行う必要に駆られたのですが意外と難しかったので以下のように考えてみました。\n時刻 hh:mm:ss+tz を、そのタイムゾーンでの 0 時からの経過秒数と、そのタイ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/linux-iso-writer",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Linux で USB メモリに ISO イメージを書き込む\nLink: https://blog.anqou.net/2026/05/linux-iso-writer\nSummary: \n    USB メモリに dd で ISO イメージを書き込もうとして誤ってシステムディスクを上書きして以来、ISO イメージの書き込みには専用の GUI ツールを使うようにしています。色々と変遷を経た結果、現在は Fedora Media Writer を使っています。操作を間違えようがないシンプルな U…\n    "
+      }
     }
   ]
 }
