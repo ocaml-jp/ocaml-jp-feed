@@ -248,6 +248,13 @@
         "verdict": false,
         "user_prompt": "Title: Linux で USB メモリに ISO イメージを書き込む\nLink: https://blog.anqou.net/2026/05/linux-iso-writer\nSummary: \n    USB メモリに dd で ISO イメージを書き込もうとして誤ってシステムディスクを上書きして以来、ISO イメージの書き込みには専用の GUI ツールを使うようにしています。色々と変遷を経た結果、現在は Fedora Media Writer を使っています。操作を間違えようがないシンプルな U…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-distrobox-ubuntu",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Distrobox で Ubuntu 用のスクリプトを NixOS で動かす\nLink: https://blog.anqou.net/2026/05/nixos-distrobox-ubuntu\nSummary: \n    NixOS は実行バイナリのインストールパスが独特なため、Ubuntu を想定して書かれているシェルスクリプトなどが動かないことがよくあります。例えば shebang が #!/usr/bin/bash になっていたり、そもそもスクリプト中に apt install や apt upgrade が埋…\n    "
+      }
     }
   ]
 }
