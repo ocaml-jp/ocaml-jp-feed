@@ -255,6 +255,13 @@
         "verdict": false,
         "user_prompt": "Title: Distrobox で Ubuntu 用のスクリプトを NixOS で動かす\nLink: https://blog.anqou.net/2026/05/nixos-distrobox-ubuntu\nSummary: \n    NixOS は実行バイナリのインストールパスが独特なため、Ubuntu を想定して書かれているシェルスクリプトなどが動かないことがよくあります。例えば shebang が #!/usr/bin/bash になっていたり、そもそもスクリプト中に apt install や apt upgrade が埋…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-nix-store-repair",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title:  で壊れた Nix store を修復する\nLink: https://blog.anqou.net/2026/05/nixos-nix-store-repair\nSummary: \n    Nix でビルドを行っている時などにシステムがハングしたり電源断になったりすると、Nix store の一貫性が壊れた状態に陥ってしまうことがあります。今日自分は nix develop の実行中にメモリが枯渇？し、その結果カーネルパニックになって Nix store が壊れました。\nその際、以下の…\n    "
+      }
     }
   ]
 }
