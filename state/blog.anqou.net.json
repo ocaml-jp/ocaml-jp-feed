@@ -262,6 +262,13 @@
         "verdict": false,
         "user_prompt": "Title:  で壊れた Nix store を修復する\nLink: https://blog.anqou.net/2026/05/nixos-nix-store-repair\nSummary: \n    Nix でビルドを行っている時などにシステムがハングしたり電源断になったりすると、Nix store の一貫性が壊れた状態に陥ってしまうことがあります。今日自分は nix develop の実行中にメモリが枯渇？し、その結果カーネルパニックになって Nix store が壊れました。\nその際、以下の…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-suppress-warning",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: OCaml で警告を抑制する\nLink: https://blog.anqou.net/2026/05/ocaml-suppress-warning\nSummary: \n    Dune を用いて OCaml コードをコンパイルすると、デフォルトで様々な警告が有効化されます。例えば使用していない変数には warning 26 が発報します：\nFile \"backend/bin/main.ml\", line 14, characters 6-10:\n14 |   let ho…\n    "
+      }
     }
   ]
 }
