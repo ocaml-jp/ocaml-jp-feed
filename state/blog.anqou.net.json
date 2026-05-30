@@ -269,6 +269,13 @@
         "verdict": true,
         "user_prompt": "Title: OCaml で警告を抑制する\nLink: https://blog.anqou.net/2026/05/ocaml-suppress-warning\nSummary: \n    Dune を用いて OCaml コードをコンパイルすると、デフォルトで様々な警告が有効化されます。例えば使用していない変数には warning 26 が発報します：\nFile \"backend/bin/main.ml\", line 14, characters 6-10:\n14 |   let ho…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/ocaml-match-with-exception",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title:  の腕で例外を捕捉する\nLink: https://blog.anqou.net/2026/05/ocaml-match-with-exception\nSummary: \n    OCaml で関数 f を実行した後に、これが成功した場合はその結果を別の関数 g に渡し、例外を送出した場合はそれを捕捉した上でさらに別の関数 h に渡したい、というような状況があります。\n教科書的には、例外の捕捉は try ... with を使って行いますが、このようなケースでは少々不便です：…\n    "
+      }
     }
   ]
 }
