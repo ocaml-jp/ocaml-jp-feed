@@ -276,6 +276,13 @@
         "verdict": true,
         "user_prompt": "Title:  の腕で例外を捕捉する\nLink: https://blog.anqou.net/2026/05/ocaml-match-with-exception\nSummary: \n    OCaml で関数 f を実行した後に、これが成功した場合はその結果を別の関数 g に渡し、例外を送出した場合はそれを捕捉した上でさらに別の関数 h に渡したい、というような状況があります。\n教科書的には、例外の捕捉は try ... with を使って行いますが、このようなケースでは少々不便です：…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/05/nixos-2605",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS 26.05 のリリースノートを読む\nLink: https://blog.anqou.net/2026/05/nixos-2605\nSummary: \n    NixOS 26.05 がリリースされました。\nNixOS には unstable と stable の 2 つのチャンネルがあり、unstable はローリングアップデート方式でリリースされ、\nstable は半年に一回、5 月と 11 月にリリースされます。NixOS 26.05 は 2026 …\n    "
+      }
     }
   ]
 }
