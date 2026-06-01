@@ -283,6 +283,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 26.05 のリリースノートを読む\nLink: https://blog.anqou.net/2026/05/nixos-2605\nSummary: \n    NixOS 26.05 がリリースされました。\nNixOS には unstable と stable の 2 つのチャンネルがあり、unstable はローリングアップデート方式でリリースされ、\nstable は半年に一回、5 月と 11 月にリリースされます。NixOS 26.05 は 2026 …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/k3s-traefik-redirect-https",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: k3s の Traefik で HTTP から HTTPS へリダイレクト\nLink: https://blog.anqou.net/2026/06/k3s-traefik-redirect-https\nSummary: \n    k3s ではデフォルトで Traefik がインストールされ Ingress などのリソースが使用できます。この環境で Ingress を使ってサービスをインターネットに公開しているときに、\nHTTP で接続してきたクライアントを HTTPS へリダイレクトさせる方法をまとめます。\nk3s のバージ…\n    "
+      }
     }
   ]
 }
