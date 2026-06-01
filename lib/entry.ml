@@ -6,7 +6,7 @@ type t =
   ; link : string
   ; description : string option
   }
-[@@deriving fields ~getters]
+[@@deriving fields ~getters, sexp_of]
 
 let create ~id ~title ~link ~description =
   match id, link with

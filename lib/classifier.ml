@@ -20,22 +20,21 @@ let user_prompt_for (entry : Entry.t) =
 let tool : Openrouter_api.Completions.Tool.t =
   Openrouter_api.Completions.Tool.create
     ~name:tool_name
-    ~description:
-      "Record whether the blog post is about the OCaml programming language."
+    ~description:"Record whether the blog post is about the OCaml programming language."
     ~parameters:
       (`Object
-        [ "type", `String "object"
-        ; ( "properties"
-          , `Object
-              [ ( "ocaml_related"
-                , `Object
-                    [ "type", `String "boolean"
-                    ; ( "description"
-                      , `String "true if the post is about OCaml; false otherwise" )
-                    ] )
-              ] )
-        ; "required", `Array [ `String "ocaml_related" ]
-        ])
+          [ "type", `String "object"
+          ; ( "properties"
+            , `Object
+                [ ( "ocaml_related"
+                  , `Object
+                      [ "type", `String "boolean"
+                      ; ( "description"
+                        , `String "true if the post is about OCaml; false otherwise" )
+                      ] )
+                ] )
+          ; "required", `Array [ `String "ocaml_related" ]
+          ])
     ()
 ;;
 
