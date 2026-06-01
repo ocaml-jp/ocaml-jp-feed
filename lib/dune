@@ -1,5 +1,5 @@
 (library
  (name ocaml_jp_feed)
- (libraries async cohttp-async core jsonaf openrouter_api re syndic xmlm)
+ (libraries async cohttp-async core jsonaf openrouter_api syndic xmlm)
  (preprocess
   (pps ppx_jane ppx_jsonaf_conv)))

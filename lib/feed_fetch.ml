@@ -14,13 +14,6 @@ let http_get url =
     raise_s [%message "feed fetch failed" url (status : Cohttp.Code.status_code)]
 ;;
 
-(* Strip Atom <link>text</link> elements with no attributes. Qiita emits these at channel
-   level and they violate the Atom spec, which syndic refuses. We can't apply this
-   unconditionally — RSS2's <link>text</link> is valid syntax — so it only runs as a final
-   fallback. *)
-let bare_link_re = Re.Pcre.re "<link>[^<]*</link>" |> Re.compile
-let strip_bare_links body = Re.replace_string bare_link_re ~by:"" body
-
 let transform_xml body ~f =
   Or_error.try_with (fun () ->
     let dtd, tree =
@@ -78,6 +71,25 @@ let flatten_text_title_markup body =
        | true ->
          let flattened_children = List.map children ~f:tree_to_string |> String.concat in
          `El (tag, [ `Data flattened_children ])))
+  |> ok_exn
+;;
+
+(* Qiita emits a channel-level [<link>text</link>] — a [link] element with text content and
+   no attributes. As an [atom:link] that violates the Atom spec (atom:link must be empty
+   with an href), so syndic refuses the whole feed. Drop such bare links (replace them with
+   empty character data) and re-parse as Atom. RSS2's [<link>text</link>] is valid syntax,
+   so this only runs as a final fallback, after Atom and RSS2 parsing have both failed. *)
+let strip_bare_links body =
+  transform_xml body ~f:(function
+    | `El (((_, "link"), []), children) as element ->
+      (match
+         List.for_all children ~f:(function
+           | `Data _ -> true
+           | `El _ -> false)
+       with
+       | true -> `Data ""
+       | false -> element)
+    | other -> other)
   |> ok_exn
 ;;
 
