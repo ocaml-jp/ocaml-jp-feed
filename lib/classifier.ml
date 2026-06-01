@@ -9,68 +9,35 @@ let system_prompt =
    classify_post tool with your determination."
 ;;
 
-let user_prompt_for (entry : Entry.t) =
-  let parts =
-    [ Some [%string "Title: %{entry.title}"]; Some [%string "Link: %{entry.link}"] ]
-    @ [ Option.map entry.description ~f:(fun d -> [%string "Summary: %{d}"]) ]
-  in
-  List.filter_opt parts |> String.concat ~sep:"\n"
-;;
-
-let tool : Openrouter_api.Completions.Tool.t =
-  Openrouter_api.Completions.Tool.create
-    ~name:tool_name
-    ~description:"Record whether the blog post is about the OCaml programming language."
-    ~parameters:
-      (`Object
-          [ "type", `String "object"
-          ; ( "properties"
-            , `Object
-                [ ( "ocaml_related"
-                  , `Object
-                      [ "type", `String "boolean"
-                      ; ( "description"
-                        , `String "true if the post is about OCaml; false otherwise" )
-                      ] )
-                ] )
-          ; "required", `Array [ `String "ocaml_related" ]
-          ])
-    ()
-;;
-
-let request ~user_prompt : Openrouter_api.Completions.Request.t =
+let request ~user_prompt =
   let module R = Openrouter_api.Completions.Request in
-  { model
-  ; messages = [ R.Message.system system_prompt; R.Message.user user_prompt ]
-  ; tools = [ tool ]
-  ; tool_choice = Some (Openrouter_api.Completions.Tool_choice.force_function tool_name)
-  ; stream = false
-  ; reasoning = None
-  ; parallel_tool_calls = None
-  ; plugins = []
-  ; temperature = None
-  ; top_p = None
-  ; top_k = None
-  ; min_p = None
-  ; top_a = None
-  ; max_tokens = None
-  ; max_completion_tokens = None
-  ; seed = None
-  ; stop = None
-  ; frequency_penalty = None
-  ; presence_penalty = None
-  ; repetition_penalty = None
-  ; logit_bias = None
-  ; logprobs = None
-  ; top_logprobs = None
-  ; verbosity = None
-  ; response_format = None
-  ; modalities = None
-  ; stream_options = None
-  ; service_tier = None
-  ; models = []
-  ; transforms = []
-  }
+  R.create
+    ~model
+    ~messages:[ R.Message.system system_prompt; R.Message.user user_prompt ]
+    ~tools:
+      [ Openrouter_api.Completions.Tool.function_
+          ~name:tool_name
+          ~description:
+            "Record whether the blog post is about the OCaml programming language."
+          ~parameters:
+            (`Object
+                [ "type", `String "object"
+                ; ( "properties"
+                  , `Object
+                      [ ( "ocaml_related"
+                        , `Object
+                            [ "type", `String "boolean"
+                            ; ( "description"
+                              , `String "true if the post is about OCaml; false otherwise"
+                              )
+                            ] )
+                      ] )
+                ; "required", `Array [ `String "ocaml_related" ]
+                ])
+          ()
+      ]
+    ~tool_choice:(Openrouter_api.Completions.Tool_choice.force_function tool_name)
+    ()
 ;;
 
 let extract_verdict (response : Openrouter_api.Completions.Response.t) =
@@ -88,10 +55,17 @@ let extract_verdict (response : Openrouter_api.Completions.Response.t) =
   |> Or_error.tag ~tag:"extracting ocaml_related field"
 ;;
 
-let classify ~api_key ~entry =
-  let user_prompt = user_prompt_for entry in
+let classify ~api_key ~(entry : Entry.t) =
+  let user_prompt =
+    let parts =
+      [ Some [%string "Title: %{entry.title}"]; Some [%string "Link: %{entry.link}"] ]
+      @ [ Option.map entry.description ~f:(fun d -> [%string "Summary: %{d}"]) ]
+    in
+    List.filter_opt parts |> String.concat ~sep:"\n"
+  in
   let%bind.Deferred.Or_error response =
-    Openrouter_api.Completions.create ~api_key (request ~user_prompt)
+    request ~user_prompt
+    |> Openrouter_api.Completions.create ~api_key
     |> Deferred.Or_error.tag ~tag:"openrouter classify call"
   in
   let%map.Deferred.Or_error verdict = extract_verdict response |> Deferred.return in
