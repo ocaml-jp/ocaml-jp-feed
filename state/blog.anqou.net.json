@@ -297,6 +297,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS で宣言的に symlink を管理する\nLink: https://blog.anqou.net/2026/06/nixos-systemd-tmpfiles-d\nSummary: \n    NixOS では通常の Linux distro と異なるシステムファイルの配置が行われるため、ソフトウェアによっては期待しているパスに必要なファイルが無くエラーになってしまうことがあります。そのような場合にはソフトウェア側の修正を行うのが正攻法ですが、様々な理由からそれが難しいこともあります。\nそ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nix-diff",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title:  で Nix derivation の差分を確認する\nLink: https://blog.anqou.net/2026/06/nix-diff\nSummary: \n    NixOS の configuration.nix や Nix Flake の flake.nix をリファクタした時などに、リファクタする前後で Nix のコードに実質的に差分が無いことを確認したくなることがあります。\nNix derivation のハッシュ値が変わらなければ差分がないことは明ら…\n    "
+      }
     }
   ]
 }
