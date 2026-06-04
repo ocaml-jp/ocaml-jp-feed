@@ -304,6 +304,13 @@
         "verdict": false,
         "user_prompt": "Title:  で Nix derivation の差分を確認する\nLink: https://blog.anqou.net/2026/06/nix-diff\nSummary: \n    NixOS の configuration.nix や Nix Flake の flake.nix をリファクタした時などに、リファクタする前後で Nix のコードに実質的に差分が無いことを確認したくなることがあります。\nNix derivation のハッシュ値が変わらなければ差分がないことは明ら…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/jj-settings",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Jujutsu（\nLink: https://blog.anqou.net/2026/06/jj-settings\nSummary: \n    最近[1] Git の代わりに Jujutsu（jj コマンド[2]） を VCS として使うようにしています。\nGit と違ってステージングが不要だったり、操作を jj undo で戻せたり、jj evolog で同一 change に対する編集履歴が見れたりと色々便利です。\nJujutsu の設…\n    "
+      }
     }
   ]
 }
