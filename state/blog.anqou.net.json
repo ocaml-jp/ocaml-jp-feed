@@ -311,6 +311,13 @@
         "verdict": false,
         "user_prompt": "Title: Jujutsu（\nLink: https://blog.anqou.net/2026/06/jj-settings\nSummary: \n    最近[1] Git の代わりに Jujutsu（jj コマンド[2]） を VCS として使うようにしています。\nGit と違ってステージングが不要だったり、操作を jj undo で戻せたり、jj evolog で同一 change に対する編集履歴が見れたりと色々便利です。\nJujutsu の設…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/k3s-netpol",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: k3s で NetworkPolicy を設定する\nLink: https://blog.anqou.net/2026/06/k3s-netpol\nSummary: \n    k3s では NetworkPolicy リソースを使い、Pod の通信を制限することができます。自分はわくわく鮟鱇ランドなどのサービスを k3s で提供するにあたり、デフォルトでは全ての通信を遮断した上で、必要な通信のみを許可するような NetworkPolicy を書いて運用しています。以下では…\n    "
+      }
     }
   ]
 }
