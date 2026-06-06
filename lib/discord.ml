@@ -34,7 +34,7 @@ let post ~webhook_url ~feed_name ~title ~link =
       | `Timeout ->
         return
           (`Finished
-            (Or_error.error_s [%message "discord post timed out" title (attempt : int)]))
+              (Or_error.error_s [%message "discord post timed out" title (attempt : int)]))
       | `Result (resp, body) ->
         let%bind () = Cohttp_async.Body.to_string body |> Deferred.ignore_m in
         (match Cohttp.Response.status resp |> Cohttp.Code.code_of_status with
@@ -47,6 +47,6 @@ let post ~webhook_url ~feed_name ~title ~link =
          | code ->
            return
              (`Finished
-               (Or_error.error_s
-                  [%message "discord post failed" title (attempt : int) (code : int)])))))
+                 (Or_error.error_s
+                    [%message "discord post failed" title (attempt : int) (code : int)])))))
 ;;

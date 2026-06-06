@@ -16,4 +16,4 @@
   (url
    https://github.com/Cumulus/Syndic/releases/download/v1.8.0/syndic-1.8.0.tbz)
   (checksum
-   sha256=e1a073f310b90d59306315042546cdde1d2d0c27270b244830274a79e59101a5)))
+   sha512=78e8544916b11cdb6b6f5b6692d7c4bf6500e2a727c41b02dd4580cfe95dad949d8273d703ec4827b3480111b248a61a551b041b0ae9fa15feece7f9b9fd7dcd)))

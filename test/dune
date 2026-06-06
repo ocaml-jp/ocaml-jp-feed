@@ -1,0 +1,6 @@
+(library
+ (name feed_fetch_test)
+ (inline_tests)
+ (libraries core ocaml_jp_feed)
+ (preprocess
+  (pps ppx_jane)))

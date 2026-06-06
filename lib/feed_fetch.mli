@@ -10,3 +10,7 @@ open! Core
 open! Async
 
 val fetch : url:string -> Entry.t list Deferred.Or_error.t
+
+module For_testing : sig
+  val parse : string -> Entry.t list Or_error.t
+end

@@ -12,7 +12,7 @@ type t = private
   ; link : string
   ; description : string option
   }
-[@@deriving fields ~getters]
+[@@deriving fields ~getters, sexp_of]
 
 val create
   :  id:string

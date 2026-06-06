@@ -6,7 +6,7 @@
 ; useful. Pinned to repo which has a fix for this; we should switch back once
 ; it's fixed.
 (pin
- (url "git+https://github.com/mt-caret/openrouter-ocaml.git")
+ (url "git+https://github.com/mt-caret/openrouter-ocaml.git#fa11be4384446e01b4529ab49d86755cdf4faeba")
  (package
   (name openrouter_api)))
 
