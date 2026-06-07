@@ -325,6 +325,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 25.11 で Docker と Incus がインストールできない\nLink: https://blog.anqou.net/2026/06/nixos-2511-docker-incus-broken\nSummary: \n    今朝最新の NixOS 25.11 （commit 535f3e6942cb1cead3929c604320d3db54b542b9）で Docker と Incus をインストールしようとすると以下のようなエラーが表示されてインストールできませんでした：\nerror: Package ‘docke…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nix-build-pause",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Nix で pause が入った Docker イメージを作る\nLink: https://blog.anqou.net/2026/06/nix-build-pause\nSummary: \n    Kubernetes ではしばしば、何もせずに待機し続ける Pod を立ち上げたくなることがあります。この際 bash -c \"sleep infinity\" などを使用してもよいのですが、プロセスに PID 1 が割り当てられてしまう影響[1]で Pod 終了時に 30 秒待機しないといけないとい…\n    "
+      }
     }
   ]
 }
