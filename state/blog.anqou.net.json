@@ -332,6 +332,13 @@
         "verdict": false,
         "user_prompt": "Title: Nix で pause が入った Docker イメージを作る\nLink: https://blog.anqou.net/2026/06/nix-build-pause\nSummary: \n    Kubernetes ではしばしば、何もせずに待機し続ける Pod を立ち上げたくなることがあります。この際 bash -c \"sleep infinity\" などを使用してもよいのですが、プロセスに PID 1 が割り当てられてしまう影響[1]で Pod 終了時に 30 秒待機しないといけないとい…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/opam-nix-custom-repo",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: opam-nix で custom repository を使う\nLink: https://blog.anqou.net/2026/06/opam-nix-custom-repo\nSummary: \n    OCaml のパッケージマネージャーである OPAM でサードパーティーのパッケージをインストールする場合、通常は opam-repository からパッケージをダウンロードします。しかし opam-repository にないパッケージや、自分でパッチを当てたパッケージなどを使用したい場合、\nO…\n    "
+      }
     }
   ]
 }
