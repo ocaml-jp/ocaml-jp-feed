@@ -346,6 +346,13 @@
         "verdict": true,
         "user_prompt": "Title: OCaml のエフェクトハンドラ内で起こる例外を呼び出し元に返却する\nLink: https://blog.anqou.net/2026/06/ocaml-catch-exc-in-effect-handler\nSummary: \n    OCaml 5.0 から導入されたエフェクトハンドラを用いると、従来は難しかったような柔軟な処理を実現できます。例えば以下のような Foo というエフェクトを定義すると：\ntype _ Effect.t += Foo : int Effect.t\n\n以下のように使えば 1, 2, 3 の順で処理が行…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-use-stale-nixpkgs",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Nix で N 日前の nixpkgs を使う\nLink: https://blog.anqou.net/2026/06/nixos-use-stale-nixpkgs\nSummary: \n    サプライチェーンアタックへの対策として、パッケージが公開されてから実際にそのパッケージを使用するまでにしばらく時間を空けるという対策が取られる場合があります。例えば pnpm の minimumReleaseAge が有名です。同じようなことを Nix でやってみます。つまり nixpkgs でリリ…\n    "
+      }
     }
   ]
 }
