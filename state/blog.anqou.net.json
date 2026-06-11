@@ -353,6 +353,13 @@
         "verdict": false,
         "user_prompt": "Title: Nix で N 日前の nixpkgs を使う\nLink: https://blog.anqou.net/2026/06/nixos-use-stale-nixpkgs\nSummary: \n    サプライチェーンアタックへの対策として、パッケージが公開されてから実際にそのパッケージを使用するまでにしばらく時間を空けるという対策が取られる場合があります。例えば pnpm の minimumReleaseAge が有名です。同じようなことを Nix でやってみます。つまり nixpkgs でリリ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-karukan",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS で Karukan を使う\nLink: https://blog.anqou.net/2026/06/nixos-karukan\nSummary: \n    Karukan は GPT-2 を利用した日本語入力システムです。\nLinux と macOS で動作します。Linux では Fcitx5 のアドオンとして動くようになっています。これを NixOS で動かしてみます。Karukan は現在のところ nixpkgs には収録されていません。\nKar…\n    "
+      }
     }
   ]
 }
