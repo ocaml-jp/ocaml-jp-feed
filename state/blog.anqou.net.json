@@ -360,6 +360,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS で Karukan を使う\nLink: https://blog.anqou.net/2026/06/nixos-karukan\nSummary: \n    Karukan は GPT-2 を利用した日本語入力システムです。\nLinux と macOS で動作します。Linux では Fcitx5 のアドオンとして動くようになっています。これを NixOS で動かしてみます。Karukan は現在のところ nixpkgs には収録されていません。\nKar…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nix-breakpoint-hook",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: breakpointHook で Nix のプログラムをデバッグする\nLink: https://blog.anqou.net/2026/06/nix-breakpoint-hook\nSummary: \n    Nix でソフトウェアのビルドを行おうとする際、最初から完璧な Nix スクリプトが書けるわけではないので、少し Nix を書いて動かしてはビルドがエラーで失敗し、それを修正してまたビルドすると失敗し……というイテレーションを回すことになります。ビルドが一瞬で終わるようなソフトウェアであればまだ良い…\n    "
+      }
     }
   ]
 }
