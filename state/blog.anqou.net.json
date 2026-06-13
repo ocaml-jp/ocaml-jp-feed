@@ -367,6 +367,13 @@
         "verdict": false,
         "user_prompt": "Title: breakpointHook で Nix のプログラムをデバッグする\nLink: https://blog.anqou.net/2026/06/nix-breakpoint-hook\nSummary: \n    Nix でソフトウェアのビルドを行おうとする際、最初から完璧な Nix スクリプトが書けるわけではないので、少し Nix を書いて動かしてはビルドがエラーで失敗し、それを修正してまたビルドすると失敗し……というイテレーションを回すことになります。ビルドが一瞬で終わるようなソフトウェアであればまだ良い…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-karukan-dict",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS で Karukan の辞書を有効化する\nLink: https://blog.anqou.net/2026/06/nixos-karukan-dict\nSummary: \n    一昨日の記事の続きで、NixOS で Karukan の辞書のサポートを有効化してみます。\nドキュメントに辞書のインストール方法が書かれているので、やることはこれを Nix のプログラムで書くだけです。\nHome Manager の home.file を使うとホームディレクトリの配下にファイルを置…\n    "
+      }
     }
   ]
 }
