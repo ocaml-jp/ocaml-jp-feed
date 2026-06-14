@@ -374,6 +374,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS で Karukan の辞書を有効化する\nLink: https://blog.anqou.net/2026/06/nixos-karukan-dict\nSummary: \n    一昨日の記事の続きで、NixOS で Karukan の辞書のサポートを有効化してみます。\nドキュメントに辞書のインストール方法が書かれているので、やることはこれを Nix のプログラムで書くだけです。\nHome Manager の home.file を使うとホームディレクトリの配下にファイルを置…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/download-helm-charts-by-chartfile",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: chartfile.yaml を基に Helm Chart をシェルスクリプトでダウンロードする\nLink: https://blog.anqou.net/2026/06/download-helm-charts-by-chartfile\nSummary: \n    わくわく鮟鱇ランド（mstdn.anqou.net）をデプロイしている Kubernetes クラスタのマニフェストは Grafana Tanka を使って管理しています。Grafana Tanka では chartfile.yaml というファイルに以下のようなフォーマットで使いたい Helm C…\n    "
+      }
     }
   ]
 }
