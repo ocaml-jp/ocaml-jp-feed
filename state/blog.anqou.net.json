@@ -381,6 +381,13 @@
         "verdict": false,
         "user_prompt": "Title: chartfile.yaml を基に Helm Chart をシェルスクリプトでダウンロードする\nLink: https://blog.anqou.net/2026/06/download-helm-charts-by-chartfile\nSummary: \n    わくわく鮟鱇ランド（mstdn.anqou.net）をデプロイしている Kubernetes クラスタのマニフェストは Grafana Tanka を使って管理しています。Grafana Tanka では chartfile.yaml というファイルに以下のようなフォーマットで使いたい Helm C…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/home-manager-build-vim-plugins",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Home Manager で nixpkgs に無い (Neo)Vim のプラグインを管理する\nLink: https://blog.anqou.net/2026/06/home-manager-build-vim-plugins\nSummary: \n    Home Manager を使うと Vim や NeoVim のプラグインを管理することができます。例えば NeoVim の場合は programs.neovim.plugins というフィールドがあります。使いたいプラグインが既に nixpkgs にある場合は、それをこのフィールドから参照するだけ…\n    "
+      }
     }
   ]
 }
