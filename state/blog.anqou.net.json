@@ -388,6 +388,13 @@
         "verdict": false,
         "user_prompt": "Title: Home Manager で nixpkgs に無い (Neo)Vim のプラグインを管理する\nLink: https://blog.anqou.net/2026/06/home-manager-build-vim-plugins\nSummary: \n    Home Manager を使うと Vim や NeoVim のプラグインを管理することができます。例えば NeoVim の場合は programs.neovim.plugins というフィールドがあります。使いたいプラグインが既に nixpkgs にある場合は、それをこのフィールドから参照するだけ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/hm-claude-code-hook",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Claude Code の Hooks を Home Manager で管理する\nLink: https://blog.anqou.net/2026/06/hm-claude-code-hook\nSummary: \n    Home Manager の programs.claude-code.settings を使うと Claude Code の ~/claude/settings.json を\nHome Manager で管理することができます。これにより、nixpkgs に収載されたコマンドを Hooks で簡単…\n    "
+      }
     }
   ]
 }
