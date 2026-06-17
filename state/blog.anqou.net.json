@@ -395,6 +395,13 @@
         "verdict": false,
         "user_prompt": "Title: Claude Code の Hooks を Home Manager で管理する\nLink: https://blog.anqou.net/2026/06/hm-claude-code-hook\nSummary: \n    Home Manager の programs.claude-code.settings を使うと Claude Code の ~/claude/settings.json を\nHome Manager で管理することができます。これにより、nixpkgs に収載されたコマンドを Hooks で簡単…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/k3s-periodic-restart",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS 上の k3s server を定期的に再起動する\nLink: https://blog.anqou.net/2026/06/k3s-periodic-restart\nSummary: \n    k3s server を動かしているとメモリ使用量が増えすぎてしまうことがあります。再起動するとメモリ使用量が減るので、バッドノウハウとして定期的に再起動したくなります。\nNixOS で管理している k3s の場合は systemd.services.k3s.serviceConfig で syst…\n    "
+      }
     }
   ]
 }
