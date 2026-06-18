@@ -402,6 +402,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 上の k3s server を定期的に再起動する\nLink: https://blog.anqou.net/2026/06/k3s-periodic-restart\nSummary: \n    k3s server を動かしているとメモリ使用量が増えすぎてしまうことがあります。再起動するとメモリ使用量が減るので、バッドノウハウとして定期的に再起動したくなります。\nNixOS で管理している k3s の場合は systemd.services.k3s.serviceConfig で syst…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-vmware-workstation",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: VMware Workstation を NixOS で使う\nLink: https://blog.anqou.net/2026/06/nixos-vmware-workstation\nSummary: \n    少し前[1]に VMware Workstation が無償化されて話題になりました。VMware Workstation を使うと GUI を使ってポチポチボタンを押すだけで Linux でも VM を立ち上げられるので、用途によっては便利です。\nNixOS はサポートリストに（当然）入っていない…\n    "
+      }
     }
   ]
 }
