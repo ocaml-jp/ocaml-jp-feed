@@ -409,6 +409,13 @@
         "verdict": false,
         "user_prompt": "Title: VMware Workstation を NixOS で使う\nLink: https://blog.anqou.net/2026/06/nixos-vmware-workstation\nSummary: \n    少し前[1]に VMware Workstation が無償化されて話題になりました。VMware Workstation を使うと GUI を使ってポチポチボタンを押すだけで Linux でも VM を立ち上げられるので、用途によっては便利です。\nNixOS はサポートリストに（当然）入っていない…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/reuse-download-license",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: reuse コマンドでライセンスファイルを作る\nLink: https://blog.anqou.net/2026/06/reuse-download-license\nSummary: \n    新しく Git レポジトリを作る時などに、その Git レポジトリ用の LICENSE ファイルを簡単に作りたくなります。昔[1]は licensor というコマンドがあり便利だったのですが、最近はあまりメジャーではないようです。\nということで代替を探していたところ、Mastodon で reuse…\n    "
+      }
     }
   ]
 }
