@@ -423,6 +423,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 26.05 に移行する\nLink: https://blog.anqou.net/2026/06/adopt-nixos-2605\nSummary: \n    NixOS 26.05 がリリースされてから三週間ほど経ちました。そろそろ頃合いかなと思い手元の環境を NixOS 25.11 から 26.05 に更新したので、その際にハマったポイントをまとめます。なお、合わせて Home Manager も release-25.11 ブランチから releas…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/hyprland-firefox-fix-large-addon-window",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Firefox の描画が HiDPI な Hyprland で乱れるのを直す\nLink: https://blog.anqou.net/2026/06/hyprland-firefox-fix-large-addon-window\nSummary: \n    少し前から、Firefox で Bitwarden や uBlock Origin などのアドオンの画面を表示させると、本来のサイズよりもやたら大きく表示されてしまうバグに悩まされていました。\n\n自分の環境では Hyprland で以下のように HiDPI を有効化しているので、おそらくその影響だろ…\n    "
+      }
     }
   ]
 }
