@@ -430,6 +430,13 @@
         "verdict": false,
         "user_prompt": "Title: Firefox の描画が HiDPI な Hyprland で乱れるのを直す\nLink: https://blog.anqou.net/2026/06/hyprland-firefox-fix-large-addon-window\nSummary: \n    少し前から、Firefox で Bitwarden や uBlock Origin などのアドオンの画面を表示させると、本来のサイズよりもやたら大きく表示されてしまうバグに悩まされていました。\n\n自分の環境では Hyprland で以下のように HiDPI を有効化しているので、おそらくその影響だろ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nix-direnv-watch-file",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: nix-direnv で flake.nix 以外のファイルの編集でも dev shell を更新する\nLink: https://blog.anqou.net/2026/06/nix-direnv-watch-file\nSummary: \n    nix-direnv を使って .envrc に以下のように書くと：\nuse flake\n\nflake.nix に定義した dev shell の環境が手元に展開されてコマンドなどが使えるようになる上に、\nflake.nix を編集すると nix 式の再評価が自動的に走って dev shell の環…\n    "
+      }
     }
   ]
 }
