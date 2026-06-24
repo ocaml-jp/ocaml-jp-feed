@@ -444,6 +444,13 @@
         "verdict": false,
         "user_prompt": "Title: Hyprland on NixOS の設定を Lua に移行する\nLink: https://blog.anqou.net/2026/06/nixos-hyprland-lua\nSummary: \n    先日の NixOS 26.05 への以降の際に Hyprland の設定ファイルの形式が従来の hyprlang から Lua に変更されたことを知りました。\nhyprlang もしばらくは使い続けられるようですがそのうちサポートが打ち切られるとのことなので、手元の設定も Lua に移行しました。\n…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/hypridle-with-new-hyprland",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Hyprland 0.55 以降で画面を点灯・消灯する\nLink: https://blog.anqou.net/2026/06/hypridle-with-new-hyprland\nSummary: \n    NixOS 26.05 に移行した際に、Hyprland が 0.55 以降では設定ファイルの言語として従来の hyprlang ではなく Lua を使うようになったことを知りました。実はこの移行は設定ファイル（hyprland.conf）のみならず、hyprctl の仕様にまで及んでいます。具体的…\n    "
+      }
     }
   ]
 }
