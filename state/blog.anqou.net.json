@@ -451,6 +451,20 @@
         "verdict": false,
         "user_prompt": "Title: Hyprland 0.55 以降で画面を点灯・消灯する\nLink: https://blog.anqou.net/2026/06/hypridle-with-new-hyprland\nSummary: \n    NixOS 26.05 に移行した際に、Hyprland が 0.55 以降では設定ファイルの言語として従来の hyprlang ではなく Lua を使うようになったことを知りました。実はこの移行は設定ファイル（hyprland.conf）のみならず、hyprctl の仕様にまで及んでいます。具体的…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/fix-nixos-unattended-upgrade-too-long-error",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS の unattended upgrade 用 GHA workflow が “too long for Unix domain socket” エラーで失敗する\nLink: https://blog.anqou.net/2026/06/fix-nixos-unattended-upgrade-too-long-error\nSummary: \n    以前 NixOS の自動更新を GitHub Actions を利用して実施するという記事を書きました。この仕組みは、若干の手直しは入りつつも現在も元気に動いていて、わくわく鮟鱇ランドを支えるサーバーを日々更新し続けています。\nところがこのスクリプトが昨日（6/25）動かなくなりました。以下のような…\n    "
+      }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-pipewire-i686-build-fail",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS 26.05 で pipewire-1.6.5-i686 がビルドできない\nLink: https://blog.anqou.net/2026/06/nixos-pipewire-i686-build-fail\nSummary: \n    少し前から NixOS 26.05 の更新が失敗するようになりました。詳細を確認すると pipewire-1.6.5-i686 のビルド中に openblas-0.3.33-i686 のビルドに失敗しているようでした。正確にはビルドはできるのですが、その後に自動で実行されるテストがいつまで経っても終…\n    "
+      }
     }
   ]
 }
