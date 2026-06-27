@@ -465,6 +465,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 26.05 で pipewire-1.6.5-i686 がビルドできない\nLink: https://blog.anqou.net/2026/06/nixos-pipewire-i686-build-fail\nSummary: \n    少し前から NixOS 26.05 の更新が失敗するようになりました。詳細を確認すると pipewire-1.6.5-i686 のビルド中に openblas-0.3.33-i686 のビルドに失敗しているようでした。正確にはビルドはできるのですが、その後に自動で実行されるテストがいつまで経っても終…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-allow-any-traffic-from-ip",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS で特定の IP アドレスからの通信を全て許可する\nLink: https://blog.anqou.net/2026/06/nixos-allow-any-traffic-from-ip\nSummary: \n    NixOS でファイアウォールの設定を行う場合、通常 networking.firewall を使います。例えば networking.firewall.allowedTCPPorts = [80]; とすれば、80 番ポートを開けることができます。\nしかし networking.firewall …\n    "
+      }
     }
   ]
 }
