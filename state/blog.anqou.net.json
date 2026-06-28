@@ -472,6 +472,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS で特定の IP アドレスからの通信を全て許可する\nLink: https://blog.anqou.net/2026/06/nixos-allow-any-traffic-from-ip\nSummary: \n    NixOS でファイアウォールの設定を行う場合、通常 networking.firewall を使います。例えば networking.firewall.allowedTCPPorts = [80]; とすれば、80 番ポートを開けることができます。\nしかし networking.firewall …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/nixos-anywhere",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: nixos-anywhere で NixOS を VPS にインストールする\nLink: https://blog.anqou.net/2026/06/nixos-anywhere\nSummary: \n    NixOS をインストールする際、通常は NixOS の公式サイトで配布されているライブイメージを USB メモリに焼いてブートし、各種コマンドなどを手動で実行して NixOS をインストールします。ただ、場合によってはこの方法が使えなかったり、使いにくいことがあります。\n例えば、最近自分はわくわく…\n    "
+      }
     }
   ]
 }
