@@ -479,6 +479,13 @@
         "verdict": false,
         "user_prompt": "Title: nixos-anywhere で NixOS を VPS にインストールする\nLink: https://blog.anqou.net/2026/06/nixos-anywhere\nSummary: \n    NixOS をインストールする際、通常は NixOS の公式サイトで配布されているライブイメージを USB メモリに焼いてブートし、各種コマンドなどを手動で実行して NixOS をインストールします。ただ、場合によってはこの方法が使えなかったり、使いにくいことがあります。\n例えば、最近自分はわくわく…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/claude-code-expect-continue",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Claude Code へ一定時間後に “continue” を入力する\nLink: https://blog.anqou.net/2026/06/claude-code-expect-continue\nSummary: \n    GLM Coding Plan で GLM-5.2 を使う生活をしているのですが、自分が契約しているのは Lite プランなので結構簡単にレートリミットに引っかかります。そんな時、以下のような expect(1) のスクリプトを書いて実行しておくと、しばらくスリープした後に “continue(改行…\n    "
+      }
     }
   ]
 }
