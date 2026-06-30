@@ -486,6 +486,13 @@
         "verdict": false,
         "user_prompt": "Title: Claude Code へ一定時間後に “continue” を入力する\nLink: https://blog.anqou.net/2026/06/claude-code-expect-continue\nSummary: \n    GLM Coding Plan で GLM-5.2 を使う生活をしているのですが、自分が契約しているのは Lite プランなので結構簡単にレートリミットに引っかかります。そんな時、以下のような expect(1) のスクリプトを書いて実行しておくと、しばらくスリープした後に “continue(改行…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/06/k3s-with-calico-on-nixos",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS + k3s に Calico を入れて動かす\nLink: https://blog.anqou.net/2026/06/k3s-with-calico-on-nixos\nSummary: \n    通常 k3s を動かす場合、内蔵されている Flannel が CNI プラグインとして使用されます。ただこの仕組みだと Tailscale Operator を使用した際にクライアントから Pod へ direct connection を張れないという不具合があり、ずっと悩んでいました。最近これ…\n    "
+      }
     }
   ]
 }
