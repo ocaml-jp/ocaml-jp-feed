@@ -493,6 +493,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS + k3s に Calico を入れて動かす\nLink: https://blog.anqou.net/2026/06/k3s-with-calico-on-nixos\nSummary: \n    通常 k3s を動かす場合、内蔵されている Flannel が CNI プラグインとして使用されます。ただこの仕組みだと Tailscale Operator を使用した際にクライアントから Pod へ direct connection を張れないという不具合があり、ずっと悩んでいました。最近これ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/k3s-with-cilium-on-nixos",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS + k3s に Cilium を入れて動かす\nLink: https://blog.anqou.net/2026/07/k3s-with-cilium-on-nixos\nSummary: \n    通常 k3s を動かす場合、内蔵されている Flannel が CNI プラグインとして使用されます。\nFlannel の代わりに Cilium を使うような構成を NixOS 上に立ち上げた k3s で試してみました。モチベーションは昨日の記事と同じなのでそちらを参照してください。\nCilium …\n    "
+      }
     }
   ]
 }
