@@ -500,6 +500,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS + k3s に Cilium を入れて動かす\nLink: https://blog.anqou.net/2026/07/k3s-with-cilium-on-nixos\nSummary: \n    通常 k3s を動かす場合、内蔵されている Flannel が CNI プラグインとして使用されます。\nFlannel の代わりに Cilium を使うような構成を NixOS 上に立ち上げた k3s で試してみました。モチベーションは昨日の記事と同じなのでそちらを参照してください。\nCilium …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/tailscale-operator-direct-conn-to-pod",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Tailscale K8s Operator で作る Ingress に同一 LAN から direct connection を張れない\nLink: https://blog.anqou.net/2026/07/tailscale-operator-direct-conn-to-pod\nSummary: \n    自宅の LAN 内に常時起動しているマシンを置いて k3s をインストールし、自宅ネットワークに閉じた諸々をサーブしようと計画しています。基本的には自宅 LAN 内の別のマシンからアクセスするのですが出先からアクセスしたい時もあるので、\nk3s 上に立ち上げた Pod に Tailscale（tai…\n    "
+      }
     }
   ]
 }
