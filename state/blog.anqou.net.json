@@ -507,6 +507,13 @@
         "verdict": false,
         "user_prompt": "Title: Tailscale K8s Operator で作る Ingress に同一 LAN から direct connection を張れない\nLink: https://blog.anqou.net/2026/07/tailscale-operator-direct-conn-to-pod\nSummary: \n    自宅の LAN 内に常時起動しているマシンを置いて k3s をインストールし、自宅ネットワークに閉じた諸々をサーブしようと計画しています。基本的には自宅 LAN 内の別のマシンからアクセスするのですが出先からアクセスしたい時もあるので、\nk3s 上に立ち上げた Pod に Tailscale（tai…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/hm2605-claude-code-skills",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Home Manager 26.05 で Claude Code の Skills を管理する\nLink: https://blog.anqou.net/2026/07/hm2605-claude-code-skills\nSummary: \n    Home Manager には Claude Code を管理する機能があります。これを使うと Skills を管理できます。programs.claude-code.skills を使います。このフィールドは複数の形式をサポートしていますが、Skills がすでに1つのディレクトリにまとまっている…\n    "
+      }
     }
   ]
 }
