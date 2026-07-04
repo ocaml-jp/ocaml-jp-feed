@@ -514,6 +514,13 @@
         "verdict": false,
         "user_prompt": "Title: Home Manager 26.05 で Claude Code の Skills を管理する\nLink: https://blog.anqou.net/2026/07/hm2605-claude-code-skills\nSummary: \n    Home Manager には Claude Code を管理する機能があります。これを使うと Skills を管理できます。programs.claude-code.skills を使います。このフィールドは複数の形式をサポートしていますが、Skills がすでに1つのディレクトリにまとまっている…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/logsql",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: VictoriaLogs の LogsQL でクエリを書く\nLink: https://blog.anqou.net/2026/07/logsql\nSummary: \n    わくわく鮟鱇ランドではログの監視に Loki を使ってきたのですが、最近サーバーを変えた際に VictoriaLogs に乗り換えました。\nLoki では LogQL というクエリ言語が使えます。一方 VictoriaLogs では LogsQL という異なるクエリ言語が使えるようになっています。公…\n    "
+      }
     }
   ]
 }
