@@ -521,6 +521,13 @@
         "verdict": false,
         "user_prompt": "Title: VictoriaLogs の LogsQL でクエリを書く\nLink: https://blog.anqou.net/2026/07/logsql\nSummary: \n    わくわく鮟鱇ランドではログの監視に Loki を使ってきたのですが、最近サーバーを変えた際に VictoriaLogs に乗り換えました。\nLoki では LogQL というクエリ言語が使えます。一方 VictoriaLogs では LogsQL という異なるクエリ言語が使えるようになっています。公…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/hyprland-screenshot",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Hyprland でスクショを撮る\nLink: https://blog.anqou.net/2026/07/hyprland-screenshot\nSummary: \n    Hyprland でスクリーンショットを撮る場合 Hyprshot を使うのが一般的です。ただ Hyprshot は 2 年以上開発が止まっていて微妙なところがあります。\n代わりに hyprwm/contrib にある Grimblast が使えます。以下のようにするとマウスで範囲選択した部分をクリ…\n    "
+      }
     }
   ]
 }
