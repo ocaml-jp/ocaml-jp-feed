@@ -528,6 +528,13 @@
         "verdict": false,
         "user_prompt": "Title: Hyprland でスクショを撮る\nLink: https://blog.anqou.net/2026/07/hyprland-screenshot\nSummary: \n    Hyprland でスクリーンショットを撮る場合 Hyprshot を使うのが一般的です。ただ Hyprshot は 2 年以上開発が止まっていて微妙なところがあります。\n代わりに hyprwm/contrib にある Grimblast が使えます。以下のようにするとマウスで範囲選択した部分をクリ…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/use-postgresql-18-with-state-version-2405",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: NixOS で stateVersion を保ったまま新しい PostgreSQL を使う\nLink: https://blog.anqou.net/2026/07/use-postgresql-18-with-state-version-2405\nSummary: \n    自分がメインで使っている NixOS の環境は NixOS 24.05 の時にセットアップしたものなので configuration.nix の stateVersion には \"24.05\" が設定されています：\n{\n  # This value determines the NixOS rele…\n    "
+      }
     }
   ]
 }
