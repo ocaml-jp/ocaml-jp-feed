@@ -542,6 +542,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS に立てた k3s で CSI Hardening Guide に従う\nLink: https://blog.anqou.net/2026/07/nixos-k3s-csi-hardening\nSummary: \n    k3s のドキュメントには CSI Hardening Guide というページがあり、これを見ながら k3s の設定を行うとセキュリティを高めることができます。NixOS で k3s を立ち上げている場合 services.k3s などの設定を調整することでこのガイドに従うことができます。なお以下…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/hyprland-avoid-maximizing-pinp-window",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: Hyprland で Firefox の PinP のウィンドウの最大化を防ぐ\nLink: https://blog.anqou.net/2026/07/hyprland-avoid-maximizing-pinp-window\nSummary: \n    Firefox の便利機能の一つに Picture-in-Picture（PinP）機能があります。これを使うと YouTube などの動画をポップアップさせて動画プレイヤーだけを一つのウィンドウとして扱えるので、ながらプログラミングに便利です。\nところが Hyprland でこの機能を使うと、Pi…\n    "
+      }
     }
   ]
 }
