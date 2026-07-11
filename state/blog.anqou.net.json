@@ -556,6 +556,13 @@
         "verdict": true,
         "user_prompt": "Title: ppx_rapper を改造し affected rows を取得する\nLink: https://blog.anqou.net/2026/07/ocaml-ppx-rapper-affected-rows\nSummary: \n    ppx_rapper は OCaml で SQL を扱う時の便利ライブラリで、\nSQL を書くと PPX によってそれを Caqti を使って RDB にアクセスする OCaml コードに変換してくれます。個人的によく使っているのですが、2 年ほどメンテがされておらず使い勝手が悪いところがあるので、…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/ocaml-ppx-rapper-let",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: ppx_rapper の let%rapper 記法を使う\nLink: https://blog.anqou.net/2026/07/ocaml-ppx-rapper-let\nSummary: \n    ppx_rapper は OCaml で SQL を扱うときの便利ライブラリで、SQL を書くと\nPPX によってそれを Caqti を使って RDB にアクセスする OCaml コードに変換してくれます。\nppx_rapper の README を見ると、以下のように使えるようになっています：\nl…\n    "
+      }
     }
   ]
 }
