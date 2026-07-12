@@ -563,6 +563,13 @@
         "verdict": true,
         "user_prompt": "Title: ppx_rapper の let%rapper 記法を使う\nLink: https://blog.anqou.net/2026/07/ocaml-ppx-rapper-let\nSummary: \n    ppx_rapper は OCaml で SQL を扱うときの便利ライブラリで、SQL を書くと\nPPX によってそれを Caqti を使って RDB にアクセスする OCaml コードに変換してくれます。\nppx_rapper の README を見ると、以下のように使えるようになっています：\nl…\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/07/ocaml-ppx-rapper-file",
+      "classification": {
+        "verdict": true,
+        "user_prompt": "Title: ppx_rapper を改造しファイルから SQL を読む\nLink: https://blog.anqou.net/2026/07/ocaml-ppx-rapper-file\nSummary: \n    ppx_rapper は OCaml で SQL を扱うときの便利ライブラリで、SQL を書くと\nPPX によってそれを Caqti を使って RDB にアクセスする OCaml コードに変換してくれます。\nこのライブラリは便利なのですが、以下のように SQL を文字列リテラルとして直書きすることし…\n    "
+      }
     }
   ]
 }
