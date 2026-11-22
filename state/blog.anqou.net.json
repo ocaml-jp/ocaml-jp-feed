@@ -577,6 +577,13 @@
         "verdict": false,
         "user_prompt": "Title: NixOS 26.05 で Strata を使う\nLink: https://blog.anqou.net/2026/11/nixos-2605-strata\nSummary: \n    この記事は人間が書いていて、不正確な情報が含まれることがあります。\n手元の NixOS 26.05 で Strata を使うのに若干試行錯誤したので、最終的にうまくいった方法をまとめます。環境は以下の通りです：\n\nソフトウェア\n\nNixOS 26.05\nNVIDIA Driver Version: …\n    "
       }
+    },
+    {
+      "id": "https://blog.anqou.net/2026/11/nmcli-set-dns-server",
+      "classification": {
+        "verdict": false,
+        "user_prompt": "Title: nmcli で DNS サーバーを指定する\nLink: https://blog.anqou.net/2026/11/nmcli-set-dns-server\nSummary: \n    この記事は人間が書いていて、不正確な情報が含まれることがあります。\nNetworkManager からカフェやホテルなどの公衆 WiFi につなぐと\nping 8.8.8.8 はつながるのに ping anqou.net は繋がらず、名前解決が動作していないことに気づくときがあります。こんなときは力…\n    "
+      }
     }
   ]
 }
